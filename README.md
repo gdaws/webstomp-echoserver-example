@@ -8,6 +8,7 @@ with the [Web-Stomp](https://www.rabbitmq.com/web-stomp.html) plugin enabled.
 Install
 -------------
 Run the following shell commands:
+
 1. `git clone https://github.com/gdaws/webstomp-echoserver-example.git`
 2. `cd webstomp-echoserver-example` 
 3. `npm install`
