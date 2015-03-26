@@ -1,0 +1,35 @@
+{
+  "name": "webstomp-echoserver-example",
+  "description": "",
+  "version": "0.1.0",
+  "keywords": [
+    "stomp", "rabbitmq", "webstomp",
+  ],
+  "licenses": [
+    {
+      "type": "GPLv2"
+    }
+  ],
+  "engines": { 
+    "node" : ">=0.10"
+  },
+  "dependencies": {
+    "websocket-stream": "^1.4.0",
+    "stompit": "~0.21.0",
+    "browserify": "^9.0.3",
+    "gulp": "^3.8.11",
+    "gulp-util": "^3.0.4",
+    "vinyl-source-stream": "^1.0.0",
+    "serve-static": "^1.9.2",
+    "finalhandler": "~0.3.4",
+    "watchify": "^2.4.0",
+    "react": "~0.12.2",
+    "react-tools": "~0.12.2",
+    "reactify": "^1.0.0",
+    "open": "~0.0.5"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "postinstall": "./node_modules/.bin/gulp"
+  }
+}

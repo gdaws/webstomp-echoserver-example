@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8" />
+    <head>
+        
+        <title>Echo Server Example</title>
+        
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="//cdn.jsdelivr.net/sockjs/0.3.4/sockjs.min.js"></script>
+        <style type="text/css">
+            
+            .received-messages {
+                height: 300px;
+                overflow: auto;
+            }
+            
+            .received-messages ul {
+                margin-bottom:0px;
+            }
+            
+            .connection-status {
+                text-transform: capitalize;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row-fluid">
+            <div class="col-md-12">
+                <h1>Echo Server Example <small>Stomp over WebSocket demo</small></h1>
+                <p>This demo requires RabbitMQ service running on localhost with the <a href="https://www.rabbitmq.com/web-stomp.html">Web-Stomp</a> plugin enabled.</p>
+            </div>
+        </div>
+        
+        <div id="app-mount"></div>
+        
+        <script type="text/javascript" src="./js/app-bundle.js"></script>
+        <script type="text/javascript">
+            (function(){
+                window.initApp({
+                    'mountElement': document.getElementById('app-mount'),
+                    'url': 'http://127.0.0.1:15674/stomp',
+                    'connectHeaders': {
+                        'host': '/',
+                        'login': 'guest',
+                        'passcode': 'guest'
+                    }
+                });
+            })();
+        </script>
+    </body>
+</html>
