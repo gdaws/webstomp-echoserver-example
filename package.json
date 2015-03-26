@@ -3,7 +3,7 @@
   "description": "",
   "version": "0.1.0",
   "keywords": [
-    "stomp", "rabbitmq", "webstomp",
+    "stomp", "rabbitmq", "webstomp"
   ],
   "licenses": [
     {
